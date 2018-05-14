@@ -1,0 +1,114 @@
+{
+  "controller": "Api::V1::AccountGuardianshipsController",
+  "action": "update",
+  "path": "/api/v1/account-guardianships/RESOURCE-ID",
+  "response": {
+    "data": {
+      "id": "RESOURCE-ID",
+      "type": "account-guardianships",
+      "links": {
+        "self": "http://test.host/api/v1/account-guardianships/RESOURCE-ID"
+      },
+      "attributes": {
+        "primary": true,
+        "guardian-id": "RESOURCE-ID",
+        "pupil-id": "RESOURCE-ID",
+        "created-at": "2018-05-14T11:29:13.573Z",
+        "updated-at": "2018-05-14T11:29:13.573Z"
+      },
+      "relationships": {
+        "guardian": {
+          "links": {
+            "self": "http://test.host/api/v1/account-guardianships/RESOURCE-ID/relationships/guardian",
+            "related": "http://test.host/api/v1/account-guardianships/RESOURCE-ID/guardian"
+          }
+        },
+        "pupil": {
+          "links": {
+            "self": "http://test.host/api/v1/account-guardianships/RESOURCE-ID/relationships/pupil",
+            "related": "http://test.host/api/v1/account-guardianships/RESOURCE-ID/pupil"
+          }
+        }
+      }
+    }
+  },
+  "request": {
+    "data": {
+      "attributes": {
+        "created-at": "2018-05-14T11:29:13.573Z",
+        "guardian-id": "RESOURCE-ID",
+        "primary": "true",
+        "pupil-id": "RESOURCE-ID",
+        "updated-at": "2018-05-14T11:29:13.573Z"
+      },
+      "id": "RESOURCE-ID",
+      "relationships": {
+        "guardian": {
+          "data": {
+            "id": "RESOURCE-ID",
+            "type": "users"
+          },
+          "links": {
+            "related": "/api/v1/account-guardianships/RESOURCE-ID/guardian",
+            "self": "/api/v1/account-guardianships/RESOURCE-ID/relationships/guardian"
+          }
+        },
+        "pupil": {
+          "data": {
+            "id": "RESOURCE-ID",
+            "type": "users"
+          },
+          "links": {
+            "related": "/api/v1/account-guardianships/RESOURCE-ID/pupil",
+            "self": "/api/v1/account-guardianships/RESOURCE-ID/relationships/pupil"
+          }
+        }
+      },
+      "type": "account-guardianships"
+    }
+  },
+  "fields": [
+    {
+      "id": "UUID"
+    },
+    {
+      "primary": "BOOLEAN"
+    },
+    {
+      "guardian_id": "UUID",
+      "field_validations": [
+        {
+          "type": "presence",
+          "options": {
+            "allow_nil": false
+          }
+        }
+      ]
+    },
+    {
+      "pupil_id": "UUID",
+      "field_validations": [
+        {
+          "type": "presence",
+          "options": {
+            "allow_nil": false
+          }
+        }
+      ]
+    },
+    {
+      "created_at": "DATETIME"
+    },
+    {
+      "updated_at": "DATETIME"
+    },
+    {
+      "link_with": null
+    }
+  ],
+  "relationships": [
+    "guardian",
+    "pupil"
+  ],
+  "generated_at": "14th May, 2018"
+}

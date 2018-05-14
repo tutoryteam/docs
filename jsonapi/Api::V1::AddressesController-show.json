@@ -1,0 +1,87 @@
+{
+  "controller": "Api::V1::AddressesController",
+  "action": "show",
+  "path": "/api/v1/addresses/RESOURCE-ID",
+  "response": {
+    "data": {
+      "id": "RESOURCE-ID",
+      "type": "addresses",
+      "links": {
+        "self": "http://test.host/api/v1/addresses/RESOURCE-ID"
+      },
+      "attributes": {
+        "country": "Australia",
+        "distance": null,
+        "lat": 33.9209208,
+        "lng": 151.242647,
+        "locality": "Randwick",
+        "nearby-lat": 33.9183388,
+        "nearby-lng": 151.2406,
+        "post-office-box-number": null,
+        "postal-code": "2031",
+        "region": "NSW",
+        "street": "46 Perouse Rd",
+        "created-at": "2018-05-14T11:29:14.308Z",
+        "updated-at": "2018-05-14T11:29:14.308Z"
+      },
+      "relationships": {
+        "user": {
+          "links": {
+            "self": "http://test.host/api/v1/addresses/RESOURCE-ID/relationships/user",
+            "related": "http://test.host/api/v1/addresses/RESOURCE-ID/user"
+          }
+        }
+      }
+    }
+  },
+  "request": {
+  },
+  "fields": [
+    {
+      "id": "UUID"
+    },
+    {
+      "country": "STRING"
+    },
+    {
+      "distance": "FLOAT"
+    },
+    {
+      "lat": "FLOAT"
+    },
+    {
+      "lng": "FLOAT"
+    },
+    {
+      "locality": "STRING"
+    },
+    {
+      "nearby_lat": "FLOAT"
+    },
+    {
+      "nearby_lng": "FLOAT"
+    },
+    {
+      "post_office_box_number": "STRING"
+    },
+    {
+      "postal_code": "STRING"
+    },
+    {
+      "region": "STRING"
+    },
+    {
+      "street": "STRING"
+    },
+    {
+      "created_at": "DATETIME"
+    },
+    {
+      "updated_at": "DATETIME"
+    }
+  ],
+  "relationships": [
+    "user"
+  ],
+  "generated_at": "14th May, 2018"
+}

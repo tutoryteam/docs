@@ -1,0 +1,69 @@
+{
+  "controller": "Api::V1::WorkExperiencesController",
+  "action": "destroy",
+  "path": "/api/v1/work-experiences/RESOURCE-ID",
+  "response": {
+  },
+  "request": {
+  },
+  "fields": [
+    {
+      "id": "UUID"
+    },
+    {
+      "position": null
+    },
+    {
+      "field_of_work": null
+    },
+    {
+      "company": null
+    },
+    {
+      "import_source": "STRING"
+    },
+    {
+      "import_id": "STRING"
+    },
+    {
+      "start_date": "DATE",
+      "field_validations": [
+        {
+          "type": "presence",
+          "options": {
+          }
+        }
+      ]
+    },
+    {
+      "end_date": "DATE"
+    },
+    {
+      "description": "TEXT",
+      "field_validations": [
+        {
+          "type": "presence",
+          "options": {
+          }
+        },
+        {
+          "type": "length",
+          "options": {
+            "maximum": 3000
+          }
+        }
+      ]
+    },
+    {
+      "avatar": "STRING"
+    },
+    {
+      "created_at": "DATETIME"
+    },
+    {
+      "updated_at": "DATETIME"
+    }
+  ],
+  "relationships": null,
+  "generated_at": "14th May, 2018"
+}

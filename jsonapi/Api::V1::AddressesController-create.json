@@ -1,0 +1,193 @@
+{
+  "controller": "Api::V1::AddressesController",
+  "action": "create",
+  "path": "/api/v1/addresses",
+  "response": {
+    "data": {
+      "id": "RESOURCE-ID",
+      "type": "addresses",
+      "links": {
+        "self": "http://test.host/api/v1/addresses/RESOURCE-ID"
+      },
+      "attributes": {
+        "country": "Australia",
+        "distance": null,
+        "lat": 33.9209208,
+        "lng": 151.242647,
+        "locality": "Randwick",
+        "nearby-lat": 33.9176248,
+        "nearby-lng": 151.2490465,
+        "post-office-box-number": null,
+        "postal-code": "2031",
+        "region": "NSW",
+        "street": "46 Perouse Rd",
+        "created-at": "2018-05-14T11:29:14.449Z",
+        "updated-at": "2018-05-14T11:29:14.449Z"
+      },
+      "relationships": {
+        "user": {
+          "links": {
+            "self": "http://test.host/api/v1/addresses/RESOURCE-ID/relationships/user",
+            "related": "http://test.host/api/v1/addresses/RESOURCE-ID/user"
+          },
+          "data": {
+            "type": "users",
+            "id": "RESOURCE-ID"
+          }
+        }
+      }
+    },
+    "included": [
+      {
+        "id": "RESOURCE-ID",
+        "type": "users",
+        "links": {
+          "self": "http://test.host/api/v1/users/RESOURCE-ID"
+        },
+        "attributes": {
+          "alias": null,
+          "email": "john.doe+46@tutory.com.au",
+          "first-name": "John",
+          "last-name": "Doe",
+          "phone": null,
+          "nationality": null,
+          "birthday": null,
+          "gender": null,
+          "student": false,
+          "tutor": false,
+          "avatar": {
+            "url": null
+          },
+          "created-at": "2018-05-14T11:29:14.434Z",
+          "updated-at": "2018-05-14T11:29:14.434Z",
+          "location": null,
+          "tutory-region-id": null,
+          "currency": null,
+          "locale": null,
+          "time-zone": null,
+          "account-status": "active",
+          "external-id": "9CDDMQM"
+        },
+        "relationships": {
+          "address": {
+            "links": {
+              "self": "http://test.host/api/v1/users/RESOURCE-ID/relationships/address",
+              "related": "http://test.host/api/v1/users/RESOURCE-ID/address"
+            }
+          },
+          "calendar": {
+            "links": {
+              "self": "http://test.host/api/v1/users/RESOURCE-ID/relationships/calendar",
+              "related": "http://test.host/api/v1/users/RESOURCE-ID/calendar"
+            }
+          },
+          "tutor-profile": {
+            "links": {
+              "self": "http://test.host/api/v1/users/RESOURCE-ID/relationships/tutor-profile",
+              "related": "http://test.host/api/v1/users/RESOURCE-ID/tutor-profile"
+            }
+          },
+          "guardians": {
+            "links": {
+              "self": "http://test.host/api/v1/users/RESOURCE-ID/relationships/guardians",
+              "related": "http://test.host/api/v1/users/RESOURCE-ID/guardians"
+            }
+          },
+          "pupils": {
+            "links": {
+              "self": "http://test.host/api/v1/users/RESOURCE-ID/relationships/pupils",
+              "related": "http://test.host/api/v1/users/RESOURCE-ID/pupils"
+            }
+          },
+          "competences": {
+            "links": {
+              "self": "http://test.host/api/v1/users/RESOURCE-ID/relationships/competences",
+              "related": "http://test.host/api/v1/users/RESOURCE-ID/competences"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "request": {
+    "data": {
+      "attributes": {
+        "country": "Australia",
+        "created-at": "2018-05-14T11:29:14.449Z",
+        "distance": "",
+        "lat": "33.9209208",
+        "lng": "151.242647",
+        "locality": "Randwick",
+        "nearby-lat": "33.924881299999996",
+        "nearby-lng": "151.2371665",
+        "post-office-box-number": "",
+        "postal-code": "2031",
+        "region": "NSW",
+        "street": "46 Perouse Rd",
+        "updated-at": "2018-05-14T11:29:14.449Z"
+      },
+      "relationships": {
+        "user": {
+          "data": {
+            "id": "RESOURCE-ID",
+            "type": "users"
+          },
+          "links": {
+            "related": "/api/v1/addresses/RESOURCE-ID/user",
+            "self": "/api/v1/addresses/RESOURCE-ID/relationships/user"
+          }
+        }
+      },
+      "type": "addresses"
+    },
+    "include": "user"
+  },
+  "fields": [
+    {
+      "id": "UUID"
+    },
+    {
+      "country": "STRING"
+    },
+    {
+      "distance": "FLOAT"
+    },
+    {
+      "lat": "FLOAT"
+    },
+    {
+      "lng": "FLOAT"
+    },
+    {
+      "locality": "STRING"
+    },
+    {
+      "nearby_lat": "FLOAT"
+    },
+    {
+      "nearby_lng": "FLOAT"
+    },
+    {
+      "post_office_box_number": "STRING"
+    },
+    {
+      "postal_code": "STRING"
+    },
+    {
+      "region": "STRING"
+    },
+    {
+      "street": "STRING"
+    },
+    {
+      "created_at": "DATETIME"
+    },
+    {
+      "updated_at": "DATETIME"
+    }
+  ],
+  "relationships": [
+    "user"
+  ],
+  "generated_at": "14th May, 2018"
+}

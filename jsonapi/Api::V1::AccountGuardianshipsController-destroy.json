@@ -1,0 +1,50 @@
+{
+  "controller": "Api::V1::AccountGuardianshipsController",
+  "action": "destroy",
+  "path": "/api/v1/account-guardianships/RESOURCE-ID",
+  "response": {
+  },
+  "request": {
+  },
+  "fields": [
+    {
+      "id": "UUID"
+    },
+    {
+      "primary": "BOOLEAN"
+    },
+    {
+      "guardian_id": "UUID",
+      "field_validations": [
+        {
+          "type": "presence",
+          "options": {
+            "allow_nil": false
+          }
+        }
+      ]
+    },
+    {
+      "pupil_id": "UUID",
+      "field_validations": [
+        {
+          "type": "presence",
+          "options": {
+            "allow_nil": false
+          }
+        }
+      ]
+    },
+    {
+      "created_at": "DATETIME"
+    },
+    {
+      "updated_at": "DATETIME"
+    },
+    {
+      "link_with": null
+    }
+  ],
+  "relationships": null,
+  "generated_at": "14th May, 2018"
+}

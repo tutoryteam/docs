@@ -1,0 +1,99 @@
+{
+  "controller": "Api::V1::AccountIdentitiesController",
+  "action": "show",
+  "path": "/api/v1/account-identities/RESOURCE-ID",
+  "response": {
+    "data": {
+      "id": "RESOURCE-ID",
+      "type": "account-identities",
+      "links": {
+        "self": "http://test.host/api/v1/account-identities/RESOURCE-ID"
+      },
+      "attributes": {
+        "value": "john.doe+18@tutory.com.au",
+        "auth0-id": "facebook|12345678918",
+        "provider": "facebook",
+        "primary": true,
+        "created-at": "2018-05-14T11:29:13.938Z",
+        "updated-at": "2018-05-14T11:29:13.938Z",
+        "verified": false
+      },
+      "relationships": {
+        "user": {
+          "links": {
+            "self": "http://test.host/api/v1/account-identities/RESOURCE-ID/relationships/user",
+            "related": "http://test.host/api/v1/account-identities/RESOURCE-ID/user"
+          }
+        }
+      }
+    }
+  },
+  "request": {
+  },
+  "fields": [
+    {
+      "id": "UUID"
+    },
+    {
+      "value": "STRING",
+      "field_validations": [
+        {
+          "type": "presence",
+          "options": {
+          }
+        }
+      ]
+    },
+    {
+      "auth0_id": "STRING",
+      "field_validations": [
+        {
+          "type": "presence",
+          "options": {
+          }
+        },
+        {
+          "type": "uniqueness",
+          "options": {
+            "case_sensitive": true
+          }
+        }
+      ]
+    },
+    {
+      "provider": "STRING",
+      "field_validations": [
+        {
+          "type": "presence",
+          "options": {
+          }
+        }
+      ]
+    },
+    {
+      "primary": "BOOLEAN"
+    },
+    {
+      "link_with": null
+    },
+    {
+      "created_at": "DATETIME"
+    },
+    {
+      "updated_at": "DATETIME"
+    },
+    {
+      "verification_token": "STRING"
+    },
+    {
+      "verified": "BOOLEAN"
+    },
+    {
+      "action": null
+    }
+  ],
+  "relationships": [
+    "user"
+  ],
+  "generated_at": "14th May, 2018"
+}

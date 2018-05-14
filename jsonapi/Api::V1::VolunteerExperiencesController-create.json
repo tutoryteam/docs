@@ -1,0 +1,114 @@
+{
+  "controller": "Api::V1::VolunteerExperiencesController",
+  "action": "create",
+  "path": "/api/v1/volunteer-experiences",
+  "response": {
+    "data": {
+      "id": "RESOURCE-ID",
+      "type": "volunteer-experiences",
+      "links": {
+        "self": "http://test.host/api/v1/volunteer-experiences/RESOURCE-ID"
+      },
+      "attributes": {
+        "role": "Welcoming Artists",
+        "field-of-work": "Music Festival",
+        "organization": "Festival Beauregard",
+        "import-source": null,
+        "import-id": null,
+        "start-date": "2014-05-14",
+        "end-date": "2016-05-14",
+        "opportunities": "My Experience",
+        "avatar": null,
+        "created-at": "2018-05-14T11:29:14.115Z",
+        "updated-at": "2018-05-14T11:29:14.115Z"
+      },
+      "relationships": {
+        "user": {
+          "links": {
+            "self": "http://test.host/api/v1/volunteer-experiences/RESOURCE-ID/relationships/user",
+            "related": "http://test.host/api/v1/volunteer-experiences/RESOURCE-ID/user"
+          }
+        }
+      }
+    }
+  },
+  "request": {
+    "data": {
+      "attributes": {
+        "avatar": "",
+        "created-at": "2018-05-14T11:29:14.115Z",
+        "end-date": "2016-05-14",
+        "field-of-work": "Music Festival",
+        "import-id": "",
+        "import-source": "",
+        "opportunities": "My Experience",
+        "organization": "Festival Beauregard",
+        "role": "Welcoming Artists",
+        "start-date": "2014-05-14",
+        "updated-at": "2018-05-14T11:29:14.115Z"
+      },
+      "relationships": {
+        "user": {
+          "data": {
+            "id": "RESOURCE-ID",
+            "type": "users"
+          },
+          "links": {
+            "related": "/api/v1/volunteer-experiences/RESOURCE-ID/user",
+            "self": "/api/v1/volunteer-experiences/RESOURCE-ID/relationships/user"
+          }
+        }
+      },
+      "type": "volunteer-experiences"
+    }
+  },
+  "fields": [
+    {
+      "id": "UUID"
+    },
+    {
+      "role": null
+    },
+    {
+      "field_of_work": null
+    },
+    {
+      "organization": null
+    },
+    {
+      "import_source": "STRING"
+    },
+    {
+      "import_id": "STRING"
+    },
+    {
+      "start_date": "DATE",
+      "field_validations": [
+        {
+          "type": "presence",
+          "options": {
+          }
+        }
+      ]
+    },
+    {
+      "end_date": "DATE"
+    },
+    {
+      "opportunities": null
+    },
+    {
+      "avatar": "STRING"
+    },
+    {
+      "created_at": "DATETIME"
+    },
+    {
+      "updated_at": "DATETIME"
+    }
+  ],
+  "relationships": [
+    "user"
+  ],
+  "generated_at": "14th May, 2018"
+}

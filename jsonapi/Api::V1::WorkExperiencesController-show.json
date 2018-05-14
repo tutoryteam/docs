@@ -1,0 +1,99 @@
+{
+  "controller": "Api::V1::WorkExperiencesController",
+  "action": "show",
+  "path": "/api/v1/work-experiences/RESOURCE-ID",
+  "response": {
+    "data": {
+      "id": "RESOURCE-ID",
+      "type": "work-experiences",
+      "links": {
+        "self": "http://test.host/api/v1/work-experiences/RESOURCE-ID"
+      },
+      "attributes": {
+        "position": "Software Engineer",
+        "field-of-work": "IT",
+        "company": "Tutory",
+        "import-source": null,
+        "import-id": null,
+        "start-date": "2014-05-14",
+        "end-date": "2016-05-14",
+        "description": "My Experience",
+        "avatar": null,
+        "created-at": "2018-05-14T11:29:12.668Z",
+        "updated-at": "2018-05-14T11:29:12.668Z"
+      },
+      "relationships": {
+        "user": {
+          "links": {
+            "self": "http://test.host/api/v1/work-experiences/RESOURCE-ID/relationships/user",
+            "related": "http://test.host/api/v1/work-experiences/RESOURCE-ID/user"
+          }
+        }
+      }
+    }
+  },
+  "request": {
+  },
+  "fields": [
+    {
+      "id": "UUID"
+    },
+    {
+      "position": null
+    },
+    {
+      "field_of_work": null
+    },
+    {
+      "company": null
+    },
+    {
+      "import_source": "STRING"
+    },
+    {
+      "import_id": "STRING"
+    },
+    {
+      "start_date": "DATE",
+      "field_validations": [
+        {
+          "type": "presence",
+          "options": {
+          }
+        }
+      ]
+    },
+    {
+      "end_date": "DATE"
+    },
+    {
+      "description": "TEXT",
+      "field_validations": [
+        {
+          "type": "presence",
+          "options": {
+          }
+        },
+        {
+          "type": "length",
+          "options": {
+            "maximum": 3000
+          }
+        }
+      ]
+    },
+    {
+      "avatar": "STRING"
+    },
+    {
+      "created_at": "DATETIME"
+    },
+    {
+      "updated_at": "DATETIME"
+    }
+  ],
+  "relationships": [
+    "user"
+  ],
+  "generated_at": "14th May, 2018"
+}

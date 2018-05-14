@@ -1,0 +1,118 @@
+{
+  "controller": "Api::V1::AddressesController",
+  "action": "update",
+  "path": "/api/v1/addresses/RESOURCE-ID",
+  "response": {
+    "data": {
+      "id": "RESOURCE-ID",
+      "type": "addresses",
+      "links": {
+        "self": "http://test.host/api/v1/addresses/RESOURCE-ID"
+      },
+      "attributes": {
+        "country": "Australia",
+        "distance": null,
+        "lat": 33.9209208,
+        "lng": 151.242647,
+        "locality": "Randwick",
+        "nearby-lat": 33.9160933,
+        "nearby-lng": 151.2366075,
+        "post-office-box-number": null,
+        "postal-code": "2031",
+        "region": "NSW",
+        "street": "46 Perouse Rd",
+        "created-at": "2018-05-14T11:29:14.394Z",
+        "updated-at": "2018-05-14T11:29:14.394Z"
+      },
+      "relationships": {
+        "user": {
+          "links": {
+            "self": "http://test.host/api/v1/addresses/RESOURCE-ID/relationships/user",
+            "related": "http://test.host/api/v1/addresses/RESOURCE-ID/user"
+          }
+        }
+      }
+    }
+  },
+  "request": {
+    "data": {
+      "attributes": {
+        "country": "Australia",
+        "created-at": "2018-05-14T11:29:14.394Z",
+        "distance": "",
+        "lat": "33.9209208",
+        "lng": "151.242647",
+        "locality": "Randwick",
+        "nearby-lat": "33.9160933",
+        "nearby-lng": "151.2366075",
+        "post-office-box-number": "",
+        "postal-code": "2031",
+        "region": "NSW",
+        "street": "46 Perouse Rd",
+        "updated-at": "2018-05-14T11:29:14.394Z"
+      },
+      "id": "RESOURCE-ID",
+      "relationships": {
+        "user": {
+          "data": {
+            "id": "RESOURCE-ID",
+            "type": "users"
+          },
+          "links": {
+            "related": "/api/v1/addresses/RESOURCE-ID/user",
+            "self": "/api/v1/addresses/RESOURCE-ID/relationships/user"
+          }
+        }
+      },
+      "type": "addresses"
+    }
+  },
+  "fields": [
+    {
+      "id": "UUID"
+    },
+    {
+      "country": "STRING"
+    },
+    {
+      "distance": "FLOAT"
+    },
+    {
+      "lat": "FLOAT"
+    },
+    {
+      "lng": "FLOAT"
+    },
+    {
+      "locality": "STRING"
+    },
+    {
+      "nearby_lat": "FLOAT"
+    },
+    {
+      "nearby_lng": "FLOAT"
+    },
+    {
+      "post_office_box_number": "STRING"
+    },
+    {
+      "postal_code": "STRING"
+    },
+    {
+      "region": "STRING"
+    },
+    {
+      "street": "STRING"
+    },
+    {
+      "created_at": "DATETIME"
+    },
+    {
+      "updated_at": "DATETIME"
+    }
+  ],
+  "relationships": [
+    "user"
+  ],
+  "generated_at": "14th May, 2018"
+}

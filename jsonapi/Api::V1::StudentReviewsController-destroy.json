@@ -1,0 +1,60 @@
+{
+  "controller": "Api::V1::StudentReviewsController",
+  "action": "destroy",
+  "path": "/api/v1/student-reviews/RESOURCE-ID",
+  "response": {
+  },
+  "request": {
+  },
+  "fields": [
+    {
+      "id": "UUID"
+    },
+    {
+      "text": "TEXT",
+      "field_validations": [
+        {
+          "type": "length",
+          "options": {
+            "maximum": 1000
+          }
+        }
+      ]
+    },
+    {
+      "improvement_suggestion": "TEXT",
+      "field_validations": [
+        {
+          "type": "length",
+          "options": {
+            "maximum": 1000
+          }
+        }
+      ]
+    },
+    {
+      "general_opinion": "INTEGER",
+      "field_validations": [
+        {
+          "type": "presence",
+          "options": {
+          }
+        },
+        {
+          "type": "inclusion",
+          "options": {
+            "in": [
+              "very_bad_opinion",
+              "bad_opinion",
+              "average_opinion",
+              "good_opinion",
+              "very_good_opinion"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "relationships": null,
+  "generated_at": "14th May, 2018"
+}

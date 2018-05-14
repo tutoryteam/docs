@@ -1,0 +1,128 @@
+{
+  "controller": "Api::V1::EducationExperiencesController",
+  "action": "update",
+  "path": "/api/v1/education-experiences/RESOURCE-ID",
+  "response": {
+    "data": {
+      "id": "RESOURCE-ID",
+      "type": "education-experiences",
+      "links": {
+        "self": "http://test.host/api/v1/education-experiences/RESOURCE-ID"
+      },
+      "attributes": {
+        "degree": "Masters",
+        "field-of-study": "IT",
+        "institution": "Standford",
+        "import-source": null,
+        "import-id": null,
+        "start-date": "2014-05-14",
+        "end-date": "2016-05-14",
+        "description": "My Experience",
+        "avatar": null,
+        "created-at": "2018-05-14T11:29:14.686Z",
+        "updated-at": "2018-05-14T11:29:14.686Z"
+      },
+      "relationships": {
+        "user": {
+          "links": {
+            "self": "http://test.host/api/v1/education-experiences/RESOURCE-ID/relationships/user",
+            "related": "http://test.host/api/v1/education-experiences/RESOURCE-ID/user"
+          }
+        }
+      }
+    }
+  },
+  "request": {
+    "data": {
+      "attributes": {
+        "avatar": "",
+        "created-at": "2018-05-14T11:29:14.686Z",
+        "degree": "Masters",
+        "description": "My Experience",
+        "end-date": "2016-05-14",
+        "field-of-study": "IT",
+        "import-id": "",
+        "import-source": "",
+        "institution": "Standford",
+        "start-date": "2014-05-14",
+        "updated-at": "2018-05-14T11:29:14.686Z"
+      },
+      "id": "RESOURCE-ID",
+      "relationships": {
+        "user": {
+          "data": {
+            "id": "RESOURCE-ID",
+            "type": "users"
+          },
+          "links": {
+            "related": "/api/v1/education-experiences/RESOURCE-ID/user",
+            "self": "/api/v1/education-experiences/RESOURCE-ID/relationships/user"
+          }
+        }
+      },
+      "type": "education-experiences"
+    }
+  },
+  "fields": [
+    {
+      "id": "UUID"
+    },
+    {
+      "degree": null
+    },
+    {
+      "field_of_study": null
+    },
+    {
+      "institution": null
+    },
+    {
+      "import_source": "STRING"
+    },
+    {
+      "import_id": "STRING"
+    },
+    {
+      "start_date": "DATE",
+      "field_validations": [
+        {
+          "type": "presence",
+          "options": {
+          }
+        }
+      ]
+    },
+    {
+      "end_date": "DATE"
+    },
+    {
+      "description": "TEXT",
+      "field_validations": [
+        {
+          "type": "presence",
+          "options": {
+          }
+        },
+        {
+          "type": "length",
+          "options": {
+            "maximum": 3000
+          }
+        }
+      ]
+    },
+    {
+      "avatar": "STRING"
+    },
+    {
+      "created_at": "DATETIME"
+    },
+    {
+      "updated_at": "DATETIME"
+    }
+  ],
+  "relationships": [
+    "user"
+  ],
+  "generated_at": "14th May, 2018"
+}
